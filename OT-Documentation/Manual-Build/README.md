@@ -29,35 +29,34 @@ This guide explains how to manually trigger builds  for applications using the b
 
 <img width="1366" height="650" alt="Screenshot from 2025-10-07 10-48-05" src="https://github.com/user-attachments/assets/af79793f-4512-4eb1-b7ca-ae0a3fa07bd3" />
 
-
-
+---
 
 1. Click **Application** from the left sidebar
 2. Click **Service Overview**
 3. Select your application (e.g., **ot-demo-ms**)
 4. Click on the application instance (e.g., **APP2**)
-
+---
 ### Step 2: Access Build Details
 1. Ensure you're on the **ENV BUILD DETAILS** tab
 2. Click on environment (e.g., **DEV-MAIN**) is according to your needs whether DEV or QA
-
+---
 ### Step 3: Trigger Build
 
 <img width="1084" height="275" alt="Screenshot from 2025-10-07 10-48-17" src="https://github.com/user-attachments/assets/bf6f3cb6-959f-4b73-853a-7609516d1112" />
 
-
+---
 
 
 
 1. Click the **Build** button (right side of the page) with a Symbol ⚡
 2. The **"Trigger a new Build"** dialog opens
 
-
+---
 ### Step 4: Configure Build Settings
 
 <img width="1359" height="653" alt="Screenshot from 2025-10-07 10-48-32" src="https://github.com/user-attachments/assets/bd6167ac-ccca-44ca-a3cf-c725c99a7083" />
 
-
+---
 
 #### Docker Cache
 - **Yes** (recommended): Faster builds, uses cached layers
@@ -94,8 +93,9 @@ Choose one option:
 1. Build status updates in real-time
 2. Click build number to view logs
 3. Check for **SUCCESS** status
-
+---
 <img width="1364" height="376" alt="image" src="https://github.com/user-attachments/assets/d36365c0-b71b-408a-ae72-b41353947854" />
+---
 
 ## Action Buttons
 
