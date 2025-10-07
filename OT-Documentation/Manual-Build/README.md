@@ -100,7 +100,7 @@ Choose one option:
 ## Action Buttons
 
 ### Top Action Bar
-- **⚡ Lightning**: Quick Build
+- **⚡ Build**: Quick Build
 - **📤 Deploy**: Quick Deploy
 - **🔄 Promote**: Promote build to another environment
 - **☰ History**: View build/deploy history
