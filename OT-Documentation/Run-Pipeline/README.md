@@ -1,5 +1,4 @@
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/2668b795-fc03-49d7-ab17-a53ba3b4e1eb" />
----
 
 #  Buildpiper Pipeline Execution Guide
 
