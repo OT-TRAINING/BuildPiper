@@ -1,3 +1,6 @@
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/2668b795-fc03-49d7-ab17-a53ba3b4e1eb" />
+---
+
 #  Buildpiper Pipeline Execution Guide
 
 ##  Overview
@@ -41,6 +44,7 @@ This document explains how to **create, configure, and execute** a pipeline in B
 ---
 
 ##  Step 2: Configure Basic Information
+
 | **Field** | **Meaning** | **Description** | **Recommended** |
 |------------|--------------|-----------------|-----------------|
 | **Pipeline Name** | The unique identifier of your pipeline. | Used to distinguish between multiple pipelines (e.g., `demo-deploy`, `prod-pipeline`). Naming should reflect the environment or purpose. | Use clear, descriptive names (e.g., `app1-prod-deploy`). |
@@ -65,10 +69,10 @@ Once filled, it auto-saves and moves to Workflow Editor.
 
 ---
 
-** Click on the Pipeline name you created, It will open Workflow Editor**
-<img width="1357" height="627" alt="Screenshot from 2025-10-13 17-11-28" src="https://github.com/user-attachments/assets/0da73d9c-06a8-44e3-a4a6-8c9117fbb670" />
----
+### Click on the Pipeline name you created, It will open Workflow Editor
 
+---
+<img width="1357" height="627" alt="Screenshot from 2025-10-13 17-11-28" src="https://github.com/user-attachments/assets/0da73d9c-06a8-44e3-a4a6-8c9117fbb670" />
 ---
 
 ##  Step 3: Add Stages
@@ -78,21 +82,22 @@ In the **Workflow Editor**:
 1. Click **ADD NEW STAGE**
 2. Set:
 
-   * **Stage Name:** e.g., Build, Deploy, Test
-   ---
-   <img width="1363" height="656" alt="image" src="https://github.com/user-attachments/assets/4a526e49-6203-4b22-ba69-1dd30cd6347c" />
-   ---
-   * **Approval Required:** Yes/No
-   ---
-   <img width="1363" height="656" alt="image" src="https://github.com/user-attachments/assets/5e854378-8ee6-4c04-8226-8e116314af70" />
-   ---
-3. Stage Approval Configurations
-   | **Field** | **Meaning** | **Purpose / Description** | **Recommended Action** |
-|------------|-------------|---------------------------|------------------------|
-| **Any questions before approval?** | Optional prompt for additional clarification from approvers. | This field allows you to set a question or note that approvers must review before granting approval. For example: “Has QA testing been validated?” or “Is rollback plan documented?” | Keep **No** if unnecessary, or enable **Yes** with clear, short questions to avoid confusion. |
-| **Do you want to push approver name to JIRA?** | Sync approval data with JIRA ticketing system. | When enabled, the name of the person who approved the stage is automatically updated in the linked JIRA ticket, ensuring traceability for change management and audit. | Enable **Yes** for production or audit-heavy environments where approvals must be logged in JIRA. |
-| **Do you want to push approver name to ServiceNow?** | Sync approval data with ServiceNow change records. | Similar to the JIRA integration — when turned on, the approver’s name is pushed to ServiceNow change request, ensuring compliance and visibility for CAB (Change Advisory Board). | Enable **Yes** for enterprises using **ServiceNow** for ITSM/change management; otherwise **No**. |
+   ### **Stage Name:** e.g., Build, Deploy, Test
    
+   <img width="1363" height="656" alt="image" src="https://github.com/user-attachments/assets/4a526e49-6203-4b22-ba69-1dd30cd6347c" />
+   
+   ### **Approval Required:** Yes/No
+   
+   <img width="1363" height="656" alt="image" src="https://github.com/user-attachments/assets/5e854378-8ee6-4c04-8226-8e116314af70" />
+   
+4. Stage Approval Configurations
+
+
+| **Field**                                            | **Meaning**                                                  | **Purpose / Description**                                                                                                                                                     | **Recommended Action**                                                                            |
+| ---------------------------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Any questions before approval?**                   | Optional prompt for additional clarification from approvers. | Allows you to set a question or note that approvers must review before granting approval. Example: “Has QA testing been validated?” or “Is rollback plan documented?”         | Keep **No** if unnecessary, or enable **Yes** with clear, short questions to avoid confusion.     |
+| **Do you want to push approver name to JIRA?**       | Sync approval data with JIRA ticketing system.               | When enabled, the name of the person who approved the stage is automatically updated in the linked JIRA ticket, ensuring traceability for change management and audit.        | Enable **Yes** for production or audit-heavy environments where approvals must be logged in JIRA. |
+| **Do you want to push approver name to ServiceNow?** | Sync approval data with ServiceNow change records.           | Similar to JIRA integration — when turned on, the approver’s name is pushed to ServiceNow change request, ensuring compliance and visibility for CAB (Change Advisory Board). | Enable **Yes** for enterprises using **ServiceNow** for ITSM/change management; otherwise **No**. |
 
 
 ---
@@ -147,14 +152,29 @@ Pipeline now visible under **Pipeline Overview**.
 * **Advanced Config:** Override variables or parameters
 
 Click **Run Pipeline** to execute.
+<img width="1366" height="653" alt="Screenshot from 2025-10-13 16-31-50" src="https://github.com/user-attachments/assets/a85139fd-7f78-44d5-9679-e1dce6d04699" />
 
 ---
+## Step 7 : Pending for Approval 
 
-##  Step 7: Monitor Execution
+* It will show the Pending for Approval , When we click on the pipeline we created ( e.g Demo 1 , k-demo etc ) there will be one window that will open. Then you have to click on Thumbs up icon for Approval. Then add Comment for same 
+---
+### 1. <img width="1366" height="652" alt="Screenshot from 2025-10-13 16-33-31" src="https://github.com/user-attachments/assets/ce7ea813-4f2a-441e-9aae-961b7233614c" />
+---
+### 2. <img width="1366" height="648" alt="Screenshot from 2025-10-13 16-33-52" src="https://github.com/user-attachments/assets/4bac1a7e-b5e9-4be8-9d9d-87b0769fb6c5" />
+---
+### 3. <img width="1359" height="653" alt="Screenshot from 2025-10-13 16-34-07" src="https://github.com/user-attachments/assets/53f5c182-56d3-40a8-aa4b-31475684a747" />
+
+
+##  Step 8: Monitor Execution
 
 * View live status: **Running, Success, Failed, Pending**
 * Each stage shows job count, duration, and logs.
 * Click **VIEW LOGS** to inspect build or deploy details.
+
+---
+<img width="1359" height="653" alt="Screenshot from 2025-10-13 16-34-32" src="https://github.com/user-attachments/assets/44ca7a44-5da4-4e16-9360-2d8ff23e8776" />
+---
 
 **Indicators:**
 
@@ -164,34 +184,6 @@ Click **Run Pipeline** to execute.
 | 🔴 Red     | Failed  |
 | 🟡 Yellow  | Running |
 | ⚪ Gray     | Pending |
-
----
-
-##  Step 8: Approval (If Required)
-
-If approval gates exist:
-
-1. **Dialog:** “Approve stage1”
-2. Add comment → “Approved for deployment”
-3. Optional: Schedule execution
-4. Click **APPROVE AND RUN**
-
-After approval, pipeline resumes automatically.
-
----
-
-##  Completion & Re-run
-
-| Status      | Description                |
-| ----------- | -------------------------- |
-| **SUCCESS** | All stages passed          |
-| **FAILED**  | Errors in one or more jobs |
-| **REVOKED** | Manually stopped execution |
-
-To rerun:
-
-* Go to **Pipeline Overview → RUN WITH PARAMETERS**
-* Modify branch/tag if needed → Run again.
 
 ---
 
@@ -232,7 +224,7 @@ To rerun:
 ---
 
 **Document Version:** 1.0
-**Last Updated:** October 2025
+**Last Updated:** 13 October 2025
 **Platform:** Buildpiper
 
 
