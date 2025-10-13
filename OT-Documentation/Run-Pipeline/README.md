@@ -39,9 +39,7 @@ This document explains how to **create, configure, and execute** a pipeline in B
 2. Click **+ ADD PIPELINE** → Opens “Setup Pipeline” page.
 ---
 <img width="1366" height="658" alt="Screenshot from 2025-10-13 17-05-08" src="https://github.com/user-attachments/assets/7ab50992-9d04-448f-b978-73c1f03a157c" />
----
 
----
 
 ##  Step 2: Configure Basic Information
 
@@ -59,20 +57,15 @@ This document explains how to **create, configure, and execute** a pipeline in B
 | **Tags** | Metadata or keywords used for filtering and searching pipelines. | Helps organize and categorize pipelines in large environments (e.g., `production`, `testing`, `frontend`). | Add tags if needed for better discoverability. |
 | **Pipeline Variables** | Dynamic key-value pairs used across pipeline steps. | Useful for managing environment details like namespaces, regions, image names, and configurations. | Define clearly: e.g., `ENV=dev`, `NAMESPACE=demo`, `REGION=us-east1`. |
 
----
 <img width="1363" height="656" alt="image" src="https://github.com/user-attachments/assets/4563db67-8a30-4030-a93f-3883f1507f53" />
----
 <img width="1363" height="656" alt="image" src="https://github.com/user-attachments/assets/3a4af927-5c76-4090-a641-4df9a9a723db" />
----
 
-Once filled, it auto-saves and moves to Workflow Editor.
+### - Once filled, it auto-saves and moves to Workflow Editor.
+### - Click on the Pipeline name you created, It will open Workflow Editor
 
----
 
-### Click on the Pipeline name you created, It will open Workflow Editor
-
----
 <img width="1357" height="627" alt="Screenshot from 2025-10-13 17-11-28" src="https://github.com/user-attachments/assets/0da73d9c-06a8-44e3-a4a6-8c9117fbb670" />
+
 ---
 
 ##  Step 3: Add Stages
